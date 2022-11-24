@@ -71,7 +71,7 @@
 							<div class="row">
 								<div class="main-header-inner">
 									<div class="nav-logo">
-                                    <a href="{{route('page.Home')}}"><img src="assets/images/logo-felix2.jpg" alt="" title="Fast Food"></a>
+                                    <a href="{{route('page.Home')}}"><img style="width: 62%; height: 62%" src="assets/images/logo-felix2.jpg" alt="" title="Fast Food"></a>
 										<h1 style="display:none"><a href="{{route('page.Home')}}">Fast Food</a></h1>
 									</div>
 									<div class="nav-top">
