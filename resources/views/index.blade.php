@@ -249,23 +249,15 @@
 															@if (Auth::guard('emp')->check())
 															<li class="avata-item">
 																	<!-- <i class="fa fa-user" aria-hidden="true"></i> -->
-																	<img src="assets/images/user/{{$user->image}}" alt="profile image">
+																	<img src="assets/images/user/{{$user->image}}" alt="profile image" style="padding-bottom: 10px">
 																	<p class="user-name">{{$user->name}}</p>
 															</li>
-																<li class="link-item"><a href="{{route('page.get_info')}}"><i class="fa fa-user"></i>My Account</a></li>
+																<!-- <li class="link-item"><a href="{{route('page.get_info')}}"><i class="fa fa-user"></i>My Account</a></li>
 																<li class="link-item"><a href="account.html"><i class="fa fa-shopping-cart"></i>My orders</a></li>
 																<li class="link-item"><a href="wish-list.html"><i class="fa fa-heart"></i>My Wishlist</a></li>
 																<li class="link-item"><a href="compare.html"><i class="fa fa-exchange"></i>My Compare</a></li>
 																<li class="link-item"><a href="contact.html"><i class="fa fa-life-ring"></i>Support</a></li>
-																<li class="link-item"><a href="index-2.html"><i class="fa fa-sign-out"></i>Logout</a></li>
-															<!-- <li class="link-item">
-																<div class="user-wrapper">
-																	<div class="profile-image">
-																	<img src="assets/images/user/{{$user->image}}" alt="profile image">
-																	</div>
-																</div>
-																<a href="javascript:void(0);">{{$user->name}}</a>
-															</li>
+																<li class="link-item"><a href="{{route('page.Logout')}}"><i class="fa fa-sign-out"></i>Logout</a></li> -->
 															<li class="link-item">
 																<svg style="font-size: 30px;" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 																	<path fill-rule="evenodd" d="M8 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10zm4.854-7.85a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
@@ -285,7 +277,7 @@
 																<a href="{{route('page.Logout')}}" @if(is_countable($cart->items) && count($cart->items)>0)
 																	onclick="return confirm('Khi đăng xuất các sản phẩm trong giỏ hàng sẽ bị mất?')"
 																@endif >Đăng xuất</a>
-															</li> -->
+															</li>
 															@endif
 															</ul>
 														</div>
