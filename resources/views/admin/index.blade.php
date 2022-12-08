@@ -136,31 +136,8 @@
             @endif">
             <a class="nav-link" href="{{route('admin.home')}}">
                 <i class="menu-icon mdi mdi-home"></i>
-                <span class="menu-title">Trang chủ</span>
+                <span class="menu-title">Quản lý đơn hàng</span>
               </a>
-            </li>
-            <li class="nav-item @if (Request::segment(1)=== 'admin' && (Request::segment(2)=== 'banner' ||Request::segment(2)=== 'images'))
-                active
-              @endif">
-              <a class="nav-link" data-toggle="collapse" href="#resources-dropdown" aria-expanded="false" aria-controls="resources-dropdown">
-                <i class="menu-icon mdi mdi-dna"></i>
-                <span class="menu-title">Quản lý đơn</span>
-                <i class="menu-arrow"></i>
-              </a>
-              <div class="collapse" id="resources-dropdown">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link @if (Request::segment(1) === 'admin' && Request::segment(2) === 'banner')
-                        active
-                    @endif" href="{{route('admin.list_banner')}}">Banner</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link @if (Request::segment(1) === 'admin' && Request::segment(2) === 'images')
-                    active
-                @endif" href="{{route('admin.list_images')}}">Ảnh</a>
-                  </li>
-                </ul>
-              </div>
             </li>
             <li class="nav-item @if (Request::segment(1) === 'admin' && (Request::segment(2)=== 'blog' ||Request::segment(2)=== 'comment_blogs'))
                 active

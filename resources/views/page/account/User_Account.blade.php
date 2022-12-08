@@ -74,9 +74,9 @@
 													<!-- <li class="item">
 														<a href="addresses.html">Modify your address book entries</a>
 													</li> -->
-													<li class="item">
+													<!-- <li class="item">
 														<a href="wish-list.html">Modify your wishlist</a>
-													</li>
+													</li> -->
 												</ul>
 											</div>
 										</div>
