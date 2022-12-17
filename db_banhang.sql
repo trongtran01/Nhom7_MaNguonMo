@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th2 13, 2021 lúc 05:23 AM
--- Phiên bản máy phục vụ: 10.4.14-MariaDB
--- Phiên bản PHP: 7.4.10
+-- Thời gian đã tạo: Th12 17, 2022 lúc 03:01 PM
+-- Phiên bản máy phục vụ: 10.4.27-MariaDB
+-- Phiên bản PHP: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,10 +29,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `about_us` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` text DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `content` text NOT NULL,
+  `status` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -42,7 +42,7 @@ CREATE TABLE `about_us` (
 --
 
 INSERT INTO `about_us` (`id`, `title`, `image`, `content`, `status`, `created_at`, `updated_at`) VALUES
-(2, '<p><strong>YUMMY tại<br />\r\nViệt Nam</strong></p>\r\n\r\n<p>C&oacute; mặt tại hơn 118 quốc gia với chuỗi 35,000 nh&agrave; h&agrave;ng tại khắp c&aacute;c ch&acirc;u lục, mỗi ng&agrave;y, YUMMYto&agrave;n cầu phục vụ hơn 70 triệu người ti&ecirc;u d&ugrave;ng, kh&ocirc;ng chỉ đảm bảo mang đến cho họ những bữa ăn ngon, an to&agrave;n vệ sinh, m&agrave; c&ograve;n l&agrave;m họ h&agrave;i l&ograve;ng với dịch vụ của YUMMY.</p>\r\n\r\n<p>Nắm bắt nhu cầu của người ti&ecirc;u d&ugrave;ng Việt Nam hiện nay, ch&uacute;ng t&ocirc;i mong muốn phục vụ những bữa ăn nhanh nhưng hợp vệ sinh, đầy đủ dưỡng chất c&ugrave;ng với cung c&aacute;ch phục vụ chuy&ecirc;n nghiệp, YUMMYcam kết sẽ l&agrave;m bạn h&agrave;i l&ograve;ng với d&ograve;ng sản phẩm nổi tiếng khắp thế giới . Kh&ocirc;ng chỉ nổi tiếng về thức ăn ngon, YUMMYc&ograve;n nổi tiếng về chuỗi ti&ecirc;u chuẩn Chất Lượng, Dịch Vụ, Vệ Sinh v&agrave; Gi&aacute; trị.</p>', 'ehbD_about_banner.jpg', '<p><span style=\"font-size:22px\"><strong>Tầm nh&igrave;n &amp; ho&agrave;i b&atilde;o<br />\r\nthương hiệu</strong></span></p>\r\n\r\n<p>YUMMY sẽ thiết lập một chuẩn mực mới cho ng&agrave;nh c&ocirc;ng nghiệp nh&agrave; h&agrave;ng phục vụ thức ăn nhanh tại Việt Nam, mang đến cho kh&aacute;ch h&agrave;ng những trải nghiệm độc nhất chỉ c&oacute; tại chuỗi nh&agrave; h&agrave;ng của ch&uacute;ng t&ocirc;i.</p>\r\n\r\n<p>Ho&agrave;i b&atilde;o của ch&uacute;ng t&ocirc;i l&agrave; phục vụ Thức ăn ngon c&ugrave;ng đội ngũ Nh&acirc;n Vi&ecirc;n Chuy&ecirc;n Nghiệp,Th&acirc;n Thiện v&agrave; l&agrave; một Th&agrave;nh Vi&ecirc;n Tốt của cộng đồng.</p>\r\n\r\n<p>Thức ăn ngon: ch&uacute;ng t&ocirc;i phục vụ thức ăn ngon từ nguồn nguy&ecirc;n vật liệu chất lượng nhất v&agrave; được chế biến theo từng y&ecirc;u cầu của kh&aacute;ch h&agrave;ng.</p>\r\n\r\n<p>Nh&acirc;n vi&ecirc;n chuy&ecirc;n nghiệp, th&acirc;n thiện: ch&uacute;ng t&ocirc;i lu&ocirc;n tạo cơ hội để nh&acirc;n vi&ecirc;n ph&aacute;t triển sự nghiệp c&ugrave;ng c&ocirc;ng ty; từ đ&oacute;, c&ugrave;ng nhau, ch&uacute;ng t&ocirc;i phục vụ kh&aacute;ch h&agrave;ng một c&aacute;ch tốt nhất.</p>\r\n\r\n<p>Th&agrave;nh vi&ecirc;n tốt của cộng đồng: Ch&uacute;ng t&ocirc;i lu&ocirc;n quan t&acirc;m đến cộng đồng, đặc biệt l&agrave; trẻ em v&agrave; c&aacute;c gia đ&igrave;nh; ch&uacute;ng t&ocirc;i mang đến niềm vui v&agrave; l&agrave;m phong ph&uacute; hơn cuộc sống của mọi người.</p>', 'Hiện', '2020-12-10 05:05:31', '2020-12-21 17:04:33');
+(2, '<p><strong>NOMNOM tại<br />\nViệt Nam</strong></p>\n\n<p>C&oacute; mặt tại hơn 118 quốc gia với chuỗi 35,000 nh&agrave; h&agrave;ng tại khắp c&aacute;c ch&acirc;u lục, mỗi ng&agrave;y, NOMNOM&agrave;n cầu phục vụ hơn 70 triệu người ti&ecirc;u d&ugrave;ng, kh&ocirc;ng chỉ đảm bảo mang đến cho họ những bữa ăn ngon, an to&agrave;n vệ sinh, m&agrave; c&ograve;n l&agrave;m họ h&agrave;i l&ograve;ng với dịch vụ của NOMNOM.</p>\n\n<p>Nắm bắt nhu cầu của người ti&ecirc;u d&ugrave;ng Việt Nam hiện nay, ch&uacute;ng t&ocirc;i mong muốn phục vụ những bữa ăn nhanh nhưng hợp vệ sinh, đầy đủ dưỡng chất c&ugrave;ng với cung c&aacute;ch phục vụ chuy&ecirc;n nghiệp, NOMNOM cam kết sẽ l&agrave;m bạn h&agrave;i l&ograve;ng với d&ograve;ng sản phẩm nổi tiếng khắp thế giới . Kh&ocirc;ng chỉ nổi tiếng về thức ăn ngon, NOMNOM c&ograve;n nổi tiếng về chuỗi ti&ecirc;u chuẩn Chất Lượng, Dịch Vụ, Vệ Sinh v&agrave; Gi&aacute; trị.</p>\n\n \n\n', 'ehbD_about_banner.jpg', '<p><span style=\"font-size:22px\"><strong>Tầm nh&igrave;n &amp; ho&agrave;i b&atilde;o<br />\nthương hiệu</strong></span></p>\n\n<p>NOMNOM sẽ thiết lập một chuẩn mực mới cho ng&agrave;nh c&ocirc;ng nghiệp nh&agrave; h&agrave;ng phục vụ thức ăn nhanh tại Việt Nam, mang đến cho kh&aacute;ch h&agrave;ng những trải nghiệm độc nhất chỉ c&oacute; tại chuỗi nh&agrave; h&agrave;ng của ch&uacute;ng t&ocirc;i.</p>\n\n<p>Ho&agrave;i b&atilde;o của ch&uacute;ng t&ocirc;i l&agrave; phục vụ Thức ăn ngon c&ugrave;ng đội ngũ Nh&acirc;n Vi&ecirc;n Chuy&ecirc;n Nghiệp,Th&acirc;n Thiện v&agrave; l&agrave; một Th&agrave;nh Vi&ecirc;n Tốt của cộng đồng.</p>\n\n<p>Thức ăn ngon: ch&uacute;ng t&ocirc;i phục vụ thức ăn ngon từ nguồn nguy&ecirc;n vật liệu chất lượng nhất v&agrave; được chế biến theo từng y&ecirc;u cầu của kh&aacute;ch h&agrave;ng.</p>\n\n<p>Nh&acirc;n vi&ecirc;n chuy&ecirc;n nghiệp, th&acirc;n thiện: ch&uacute;ng t&ocirc;i lu&ocirc;n tạo cơ hội để nh&acirc;n vi&ecirc;n ph&aacute;t triển sự nghiệp c&ugrave;ng c&ocirc;ng ty; từ đ&oacute;, c&ugrave;ng nhau, ch&uacute;ng t&ocirc;i phục vụ kh&aacute;ch h&agrave;ng một c&aacute;ch tốt nhất.</p>\n\n<p>Th&agrave;nh vi&ecirc;n tốt của cộng đồng: Ch&uacute;ng t&ocirc;i lu&ocirc;n quan t&acirc;m đến cộng đồng, đặc biệt l&agrave; trẻ em v&agrave; c&aacute;c gia đ&igrave;nh; ch&uacute;ng t&ocirc;i mang đến niềm vui v&agrave; l&agrave;m phong ph&uacute; hơn cuộc sống của mọi người.</p>', 'Hiện', '2020-12-10 05:05:31', '2020-12-21 17:04:33');
 
 -- --------------------------------------------------------
 
@@ -52,11 +52,11 @@ INSERT INTO `about_us` (`id`, `title`, `image`, `content`, `status`, `created_at
 
 CREATE TABLE `banner` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slide` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `slide` varchar(255) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -66,9 +66,9 @@ CREATE TABLE `banner` (
 --
 
 INSERT INTO `banner` (`id`, `image`, `slide`, `link`, `title`, `status`, `created_at`, `updated_at`) VALUES
-(3, 'ET4g_banner3.jpg', 'eFOd_slideshow-caption-3.png', 'http://localhost/LARAVEL/Project/product/1', 'Tìm hiểu thêm', 'Hiện', '2020-12-19 09:29:06', '2020-12-25 13:44:47'),
-(4, 'AZGO_LZZl_1_83ead4e7-aea5-4e9d-9434-4955aa4586dc.jpg', 'QFsP_3MS6_slideshow-caption-1.png', 'http://localhost/LARAVEL/Project/product/1', 'Tìm hiểu thêm', 'Hiện', '2020-12-25 13:39:06', '2020-12-25 13:39:06'),
-(5, '5Dlz_NbNm_2_65174602-c41e-437a-a443-b1ec72838027.jpg', 'amJb_slideshow-caption-2.png', 'http://localhost/LARAVEL/Project/product_detail/40', 'Mua ngay', 'Hiện', '2020-12-25 13:41:47', '2020-12-25 13:41:47');
+(3, 'felix1.jpg', 'eFOd_slideshow-caption-3.png', 'http://localhost/LARAVEL/Project/product/1', 'Tìm hiểu thêm', 'Hiện', '2020-12-19 09:29:06', '2020-12-25 13:44:47'),
+(4, 'felix2.jpg', 'QFsP_3MS6_slideshow-caption-1.png', 'http://localhost/LARAVEL/Project/product/1', 'Tìm hiểu thêm', 'Hiện', '2020-12-25 13:39:06', '2020-12-25 13:39:06'),
+(5, 'felix3.jpg', 'amJb_slideshow-caption-2.png', 'http://localhost/LARAVEL/Project/product_detail/40', 'Mua ngay', 'Hiện', '2020-12-25 13:41:47', '2020-12-25 13:41:47');
 
 -- --------------------------------------------------------
 
@@ -78,10 +78,10 @@ INSERT INTO `banner` (`id`, `image`, `slide`, `link`, `title`, `status`, `create
 
 CREATE TABLE `blog` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` text DEFAULT NULL,
+  `image` varchar(255) NOT NULL,
+  `content` text NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -117,8 +117,8 @@ CREATE TABLE `comment` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `id_user` bigint(20) UNSIGNED NOT NULL,
   `id_product` bigint(20) UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `content` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `content` varchar(255) NOT NULL,
   `number_star` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -148,7 +148,7 @@ CREATE TABLE `comment_blogs` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `id_blog` bigint(20) UNSIGNED NOT NULL,
   `id_user` bigint(20) UNSIGNED NOT NULL,
-  `comment` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `comment` text NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -175,9 +175,9 @@ INSERT INTO `comment_blogs` (`id`, `id_blog`, `id_user`, `comment`, `created_at`
 
 CREATE TABLE `contact` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `messages` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `messages` text NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -199,10 +199,10 @@ INSERT INTO `contact` (`id`, `name`, `email`, `messages`, `created_at`, `updated
 
 CREATE TABLE `contact_info` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `address` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tel` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `fax` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `address` text NOT NULL,
+  `tel` varchar(255) NOT NULL,
+  `fax` varchar(255) NOT NULL,
+  `email` text NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -222,10 +222,10 @@ INSERT INTO `contact_info` (`id`, `address`, `tel`, `fax`, `email`, `created_at`
 
 CREATE TABLE `customers` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `phone_nb` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `phone_nb` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -247,7 +247,10 @@ INSERT INTO `customers` (`id`, `name`, `email`, `address`, `phone_nb`, `created_
 (10, 'Hữu Luân', 'mp753115@gmail.com', 'Cẩm Văn Cẩm Giàng', '0888062201', '2021-01-08 03:17:20', '2021-01-08 03:17:20'),
 (11, 'Hữu Luân', 'mp753115@gmail.com', 'Cẩm Văn Cẩm Giàng', '0888062201', '2021-01-08 03:20:18', '2021-01-08 03:20:18'),
 (12, 'Hữu Luân', 'mp753115@gmail.com', 'Cẩm Văn Cẩm Giàng', '0888062201', '2021-01-27 12:54:44', '2021-01-27 12:54:44'),
-(13, 'Nguyễn Khuyến', 'mp753119@gmail.com', 'Cẩm Văn - Cẩm Giàng', '+84866006520', '2021-01-27 13:08:59', '2021-01-27 13:08:59');
+(13, 'Nguyễn Khuyến', 'mp753119@gmail.com', 'Cẩm Văn - Cẩm Giàng', '+84866006520', '2021-01-27 13:08:59', '2021-01-27 13:08:59'),
+(14, 'Hữu Luân', 'mp753115@gmail.com', 'Cẩm Văn Cẩm Giàng', '0888062201', '2022-12-07 01:00:22', '2022-12-07 01:00:22'),
+(15, 'Trần Trọng ', 'mp753115@gmail.com', 'Cẩm Văn Cẩm Giàng', '0888062201', '2022-12-08 16:28:15', '2022-12-08 16:28:15'),
+(16, 'Trần Trọng ', 'mp753115@gmail.com', 'Cẩm Văn Cẩm Giàng', '0888062201', '2022-12-08 17:11:53', '2022-12-08 17:11:53');
 
 -- --------------------------------------------------------
 
@@ -257,10 +260,10 @@ INSERT INTO `customers` (`id`, `name`, `email`, `address`, `phone_nb`, `created_
 
 CREATE TABLE `failed_jobs` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `connection` text NOT NULL,
+  `queue` text NOT NULL,
+  `payload` longtext NOT NULL,
+  `exception` longtext NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -272,9 +275,9 @@ CREATE TABLE `failed_jobs` (
 
 CREATE TABLE `images` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `priority` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `link` varchar(255) DEFAULT NULL,
+  `priority` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -297,7 +300,7 @@ INSERT INTO `images` (`id`, `name`, `link`, `priority`, `created_at`, `updated_a
 
 CREATE TABLE `migrations` (
   `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `migration` varchar(255) NOT NULL,
   `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -338,8 +341,8 @@ CREATE TABLE `order` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `id_customer` bigint(20) UNSIGNED NOT NULL,
   `total` double NOT NULL,
-  `note` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `payment` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `note` varchar(255) DEFAULT NULL,
+  `payment` varchar(255) NOT NULL,
   `status` int(1) DEFAULT 0,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -351,13 +354,13 @@ CREATE TABLE `order` (
 
 INSERT INTO `order` (`id`, `id_customer`, `total`, `note`, `payment`, `status`, `created_at`, `updated_at`) VALUES
 (2, 2, 128000, NULL, 'Thanh toán khi nhận hàng', 1, '2020-12-25 16:47:01', '2021-01-08 03:17:32'),
-(3, 3, 181100, NULL, 'Thanh toán khi nhận hàng', 1, '2020-12-25 16:48:15', '2021-01-08 03:17:36'),
-(4, 4, 65000, NULL, 'Thanh toán khi nhận hàng', 1, '2020-12-25 16:50:57', '2021-01-08 03:17:34'),
-(5, 5, 406640, 'adadsadas', 'Thanh toán khi nhận hàng', 1, '2020-12-26 03:46:09', '2021-01-08 03:17:31'),
 (6, 10, 196100, NULL, 'Thanh toán khi nhận hàng', 1, '2021-01-08 03:17:20', '2021-01-08 03:17:29'),
 (7, 11, 714940, 'Giao nhanh lên, đang đói!!!!', 'Thanh toán khi nhận hàng', 1, '2021-01-08 03:20:18', '2021-01-08 03:20:45'),
 (8, 12, 410000, 'làm nhanh cái, đang đói', 'Thanh toán khi nhận hàng', 1, '2021-01-27 12:54:44', '2021-01-27 13:05:15'),
-(9, 13, 116000, NULL, 'Thanh toán khi nhận hàng', 0, '2021-01-27 13:08:59', '2021-01-27 13:08:59');
+(9, 13, 116000, NULL, 'Thanh toán khi nhận hàng', 1, '2021-01-27 13:08:59', '2022-12-08 15:55:21'),
+(10, 14, 56100, NULL, 'Thanh toán khi nhận hàng', 0, '2022-12-07 01:00:22', '2022-12-07 01:00:22'),
+(11, 15, 694020000, NULL, 'Thanh toán khi nhận hàng', 1, '2022-12-08 16:28:15', '2022-12-08 16:28:28'),
+(12, 16, 1308800, NULL, 'Thanh toán khi nhận hàng', 1, '2022-12-08 17:11:53', '2022-12-08 17:12:20');
 
 -- --------------------------------------------------------
 
@@ -383,9 +386,6 @@ CREATE TABLE `order_detail` (
 
 INSERT INTO `order_detail` (`id`, `id_order`, `id_product`, `id_size`, `id_topping`, `quantity`, `price`, `created_at`, `updated_at`) VALUES
 (3, 2, 30, 2, NULL, 2, 108000, '2020-12-25 16:47:01', '2020-12-25 16:47:01'),
-(4, 3, 72, 1, NULL, 1, 161100, '2020-12-25 16:48:15', '2020-12-25 16:48:15'),
-(5, 4, 24, 1, NULL, 1, 45000, '2020-12-25 16:50:57', '2020-12-25 16:50:57'),
-(6, 5, 72, 2, NULL, 2, 386640, '2020-12-26 03:46:09', '2020-12-26 03:46:09'),
 (7, 6, 19, 1, NULL, 1, 45000, '2021-01-08 03:17:20', '2021-01-08 03:17:20'),
 (8, 6, 71, 1, NULL, 1, 116100, '2021-01-08 03:17:20', '2021-01-08 03:17:20'),
 (9, 6, 54, 1, NULL, 1, 15000, '2021-01-08 03:17:20', '2021-01-08 03:17:20'),
@@ -397,7 +397,10 @@ INSERT INTO `order_detail` (`id`, `id_order`, `id_product`, `id_size`, `id_toppi
 (15, 7, 55, 2, 6, 4, 365120, '2021-01-08 03:20:18', '2021-01-08 03:20:18'),
 (16, 8, 41, 2, NULL, 5, 390000, '2021-01-27 12:54:44', '2021-01-27 12:54:44'),
 (17, 9, 64, 1, NULL, 1, 24000, '2021-01-27 13:08:59', '2021-01-27 13:08:59'),
-(18, 9, 47, 2, NULL, 3, 72000, '2021-01-27 13:08:59', '2021-01-27 13:08:59');
+(18, 9, 47, 2, NULL, 3, 72000, '2021-01-27 13:08:59', '2021-01-27 13:08:59'),
+(19, 10, 65, 1, NULL, 1, 36100, '2022-12-07 01:00:22', '2022-12-07 01:00:22'),
+(20, 11, 62, 1, 3, 10000, 694000000, '2022-12-08 16:28:15', '2022-12-08 16:28:15'),
+(21, 12, 72, 1, NULL, 8, 1288800, '2022-12-08 17:11:53', '2022-12-08 17:11:53');
 
 -- --------------------------------------------------------
 
@@ -407,10 +410,10 @@ INSERT INTO `order_detail` (`id`, `id_order`, `id_product`, `id_size`, `id_toppi
 
 CREATE TABLE `our_team` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `position` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `introduce` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `position` varchar(255) NOT NULL,
+  `introduce` text NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -431,8 +434,8 @@ INSERT INTO `our_team` (`id`, `image`, `name`, `position`, `introduce`, `created
 --
 
 CREATE TABLE `password_resets` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `token` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -445,15 +448,15 @@ CREATE TABLE `password_resets` (
 CREATE TABLE `product` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `id_type` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` text DEFAULT NULL,
   `unit_price` double NOT NULL,
   `discount` int(11) NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `unit` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `unit` varchar(255) NOT NULL,
   `total_rating` int(11) DEFAULT NULL,
   `number_star` int(11) DEFAULT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -533,7 +536,7 @@ INSERT INTO `product` (`id`, `id_type`, `name`, `description`, `unit_price`, `di
 (69, 3, 'Bò tắm phô mai (bánh lớn)', NULL, 105000, 20, 'G7Gh_exc_burger_2.jpg', 'Phần', 1, 4, 'Hiện', '2020-12-21 06:42:27', '2020-12-21 17:09:05'),
 (70, 3, 'Bò nướng whopper', NULL, 105000, 0, 'X7LJ_bb_whopper-v1-min_1.png', 'Phần', 0, 0, 'Hiện', '2020-12-21 06:46:25', '2020-12-21 06:46:25'),
 (71, 3, 'Burger bò khoai giòn tràn phô mai (bánh lớn)', NULL, 129000, 10, '4U9d_crunchy_whp-min_1.jpg', 'Phần', 1, 4, 'Hiện', '2020-12-21 06:48:55', '2020-12-22 12:09:37'),
-(72, 3, 'Burger 2 miếng bò khoai giòn tràn phô mai (bánh lớn)', NULL, 179000, 10, 'Kwbq_dbl_crunchy_whp-min_1.jpg', 'Phần', 0, 0, 'Hiện', '2020-12-21 06:50:03', '2020-12-21 06:50:03'),
+(72, 3, 'Burger 2 miếng bò khoai giòn tràn phô mai (bánh lớn)', NULL, 179000, 10, 'Kwbq_dbl_crunchy_whp-min_1.jpg', 'Phần', 1, 4, 'Hiện', '2020-12-21 06:50:03', '2022-12-07 00:25:46'),
 (75, 3, 'Hamburger', NULL, 70000, 15, 'YKgd_hamburger.jpg', 'Phần', 0, 0, 'Hiện', '2020-12-25 14:22:27', '2020-12-25 14:24:16');
 
 -- --------------------------------------------------------
@@ -544,9 +547,9 @@ INSERT INTO `product` (`id`, `id_type`, `name`, `description`, `unit_price`, `di
 
 CREATE TABLE `size` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) NOT NULL,
   `percent` int(11) NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -568,9 +571,9 @@ INSERT INTO `size` (`id`, `name`, `percent`, `status`, `created_at`, `updated_at
 
 CREATE TABLE `topping` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) NOT NULL,
   `price` double NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -593,10 +596,10 @@ INSERT INTO `topping` (`id`, `name`, `price`, `status`, `created_at`, `updated_a
 
 CREATE TABLE `type_product` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `banner_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `banner_type` varchar(255) NOT NULL,
   `new` int(11) NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -621,16 +624,16 @@ INSERT INTO `type_product` (`id`, `name`, `banner_type`, `new`, `status`, `creat
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `SDT` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `gender` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `SDT` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `gender` varchar(255) DEFAULT NULL,
   `token` int(11) NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `remember_token` varchar(100) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -640,12 +643,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `image`, `name`, `email`, `password`, `SDT`, `address`, `gender`, `token`, `email_verified_at`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'zkx9_face13.jpg', 'Hà Minh Phương', 'mp753114@gmail.com', '$2y$10$2IfkSp0IjiGDHm9s3f5HPOZT57LPL9QGPKgkrpUBa2IvVS3liE/UK', '0866006520', 'Cẩm Văn Cẩm Giàng Hải Dương', 'nam', 1, NULL, NULL, NULL, '2020-12-21 17:11:28'),
-(2, 'ZEIL_face3.jpg', 'Hữu Luân', 'mp753115@gmail.com', '$2y$10$H2lPFUjAiS2s7ic8fiMSH.8SwyRiDzlmQ9Iha65pKIYrKcjWIsUfS', '0888062201', 'Cẩm Văn Cẩm Giàng', 'nam', 0, NULL, NULL, NULL, '2020-12-06 08:45:25'),
-(3, 'y51r_face21.jpg', 'Phương Hà', 'mp753116@gmail.com', '$2y$10$5zkTOn7hk3.rCm90wDePpeNMS66wo9rfpJNGOqeBT6zvOB89bsDKO', '0866006523', 'Cẩm Văn - Cẩm Giàng', 'nam', 0, NULL, NULL, '2020-12-03 18:28:56', '2020-12-14 02:04:43'),
-(4, NULL, 'Nguyễn Khuyến', 'mp753117@gmail.com', '$2y$10$amntIvbXObGDO2opMxr9Gu3NSj6A5/UQDeiSlTi9L0MzkrSe4irmG', NULL, NULL, NULL, 0, NULL, NULL, '2020-12-16 16:05:43', '2020-12-16 16:05:43'),
-(5, 'Likr_about_avatar_2.jpg', 'Hà Minh Phương', 'mp753118@gmail.com', '$2y$10$hu1vnNaTNa9BoP3KSlOOr.1jmKts4VBfvDgB3LrGgFXlSfpuPSBCW', '0866006520', 'Cẩm Văn Cẩm Giàng', 'nam', 0, NULL, NULL, '2020-12-26 03:44:22', '2020-12-26 03:45:14'),
-(6, NULL, 'Nguyễn Khuyến', 'mp753119@gmail.com', '$2y$10$sLsTBDssrbMtMjdE./MZBe0iPqCm5VP1JHgZ9rF4cO5wMLVewQPLe', NULL, NULL, NULL, 0, NULL, NULL, '2021-01-27 13:08:11', '2021-01-27 13:08:11');
+(1, 'zkx9_face13.jpg', 'Nhóm 7', 'mp753114@gmail.com', '$2y$10$SkO2qfEPgdiEEk44RoIVpeI/tuewmURrLy6PYiMaQf2Dxf3m4zxte', '0866006520', 'Cẩm Văn Cẩm Giàng Hải Dương', 'nam', 1, NULL, NULL, NULL, '2020-12-21 17:11:28'),
+(2, 'ZEIL_face3.jpg', 'Trần Trọng ', 'mp753115@gmail.com', '$2y$10$SkO2qfEPgdiEEk44RoIVpeI/tuewmURrLy6PYiMaQf2Dxf3m4zxte', '0888062201', 'Cẩm Văn Cẩm Giàng', 'nam', 0, NULL, NULL, NULL, '2020-12-06 08:45:25'),
+(3, 'y51r_face21.jpg', 'Trọng Trần', 'mp753116@gmail.com', '$2y$10$SkO2qfEPgdiEEk44RoIVpeI/tuewmURrLy6PYiMaQf2Dxf3m4zxte', '0866006523', 'Cẩm Văn - Cẩm Giàng', 'nam', 0, NULL, NULL, '2020-12-03 18:28:56', '2020-12-14 02:04:43'),
+(4, NULL, 'Tùng', 'mp753117@gmail.com', '$2y$10$SkO2qfEPgdiEEk44RoIVpeI/tuewmURrLy6PYiMaQf2Dxf3m4zxte', NULL, NULL, NULL, 0, NULL, NULL, '2020-12-16 16:05:43', '2020-12-16 16:05:43'),
+(5, 'Likr_about_avatar_2.jpg', 'Quỳnh', 'mp753118@gmail.com', '$2y$10$SkO2qfEPgdiEEk44RoIVpeI/tuewmURrLy6PYiMaQf2Dxf3m4zxte', '0866006520', 'Cẩm Văn Cẩm Giàng', 'nam', 0, NULL, NULL, '2020-12-26 03:44:22', '2020-12-26 03:45:14'),
+(6, NULL, 'Huy Lee', 'mp753119@gmail.com', '$2y$10$SkO2qfEPgdiEEk44RoIVpeI/tuewmURrLy6PYiMaQf2Dxf3m4zxte', NULL, NULL, NULL, 0, NULL, NULL, '2021-01-27 13:08:11', '2021-01-27 13:08:11');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -808,7 +811,7 @@ ALTER TABLE `blog`
 -- AUTO_INCREMENT cho bảng `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT cho bảng `comment_blogs`
@@ -832,7 +835,7 @@ ALTER TABLE `contact_info`
 -- AUTO_INCREMENT cho bảng `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT cho bảng `failed_jobs`
@@ -856,13 +859,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT cho bảng `order`
 --
 ALTER TABLE `order`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT cho bảng `order_detail`
 --
 ALTER TABLE `order_detail`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT cho bảng `our_team`
@@ -898,7 +901,7 @@ ALTER TABLE `type_product`
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
